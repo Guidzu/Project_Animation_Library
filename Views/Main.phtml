@@ -1,0 +1,45 @@
+
+<div class="SearchAnimations">
+    
+    <form method="GET">
+        <input type="search" name="SearchBar" id="SearchBar" placeholder="search..."/>
+        <input type="hidden" value="Submit"/>
+        <!--add event listener "KeyUp" each time it triggers get value transfer to php.controller -->
+        <!--cancelled idea-->
+    </form>
+    <button class="reset">
+        <a href="./main?SearchBar=Recents">Reset</a>
+    </button>
+</div>
+ 
+
+<p class="alignCenter"><?= $noMatch ?? '' ?></p>
+<p class="alignCenter"><?= $hack ?? '' ?></p>
+<div class="alignArticles">
+<?php foreach($write as $newContent): ?>
+    <div class="justifySize">
+          <div class ="containerAnimation">
+             <button class ="buttonHtml">HTML</button>
+             <button class ="buttonCss">CSS</button>
+             <button class ="buttonGif">RENDER</button>
+            
+            <noscript class="colorRed">I require JavaScript to work</noscript>
+           
+                <p>Category :<?= htmlspecialchars($newContent -> category)?>, Name :<?= htmlspecialchars($newContent -> name)?></p>
+                <p class ="htmlContent Hide" ><?= htmlspecialchars($newContent -> html_content)?></p>
+                <p class ="cssContent Hide" ><?= htmlspecialchars($newContent -> css_content)?></p>
+                <div class ="gifContent">  
+                    <iframe src = "<?= htmlspecialchars($newContent -> gif)?>"></iframe>
+                </div>
+            
+          </div><!--div containerAnimation closed-->
+      
+            <div class="alignToButton">
+                 <button class ="heartButton"><i class="fa-solid fa-heart"></i></button>
+                 <p class="colorRed"><? = $newContent -> count?>Liked it</p>
+                <p><?= $newContent -> created_at?></p> 
+           </div>
+   </div> <!--div justifySize closed-->
+<?php endforeach; ?>
+</div><!--div alignArticles closed-->
+    

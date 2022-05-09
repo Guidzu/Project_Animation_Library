@@ -1,0 +1,4 @@
+RewriteEngine on 
+RewriteCond %{HTTP_HOST} ^https://guidobenoist.ide.3wa.io
+RewriteCond %{REQUEST_URI} !^/Project_Animation_Library/Public/index.php 
+RewriteRule (.*) /Project_Animation_Library/Public/index.php?url=$1 [QSA,L]

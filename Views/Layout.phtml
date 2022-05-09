@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation Library</title>
+    <link rel="stylesheet" href="./Assets/Css/main.css"> 
+    <!--Fav icon for website-->
+    <link rel="shortcut icon" type="image/png" href="./Assets/img/triangle.png"/>
+    <!-- Font Awesome 6 -->
+    <script src="https://kit.fontawesome.com/915f4f192f.js" crossorigin="anonymous"></script>
+    <!--a drop of Js -->
+    <script src="./Assets/Js/main.js"></script>
+</head>
+<body>
+     <!--just to separate the 2 href from Home and Layout-->
+    <header class = hideMyCss id= spacingNav>
+
+            <a href="./home" >Home</a>
+            <a href="./contact">Contact</a>
+           
+              <?php if(isset($_SESSION['role'])) :?>
+               <button><a href="./logout">Logout</a></button>
+              <?php else: ?>
+               <button><a href="./login">Login</a></button>
+              <?php endif;  ?>
+              
+             <?php if(isset($_SESSION['role']) && $_SESSION['role'] == 1) :?>
+             <button><a href="./addAnimation">Template</a></button>
+              <?php endif;  ?>
+             
+    </header>
+    
+   <div><?= $content ?></div> 
+
+</body>
+</html>

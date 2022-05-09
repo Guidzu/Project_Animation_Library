@@ -1,0 +1,60 @@
+<?php
+if($_GET['connect'] !=='register'):
+?>
+    <p><?= $error ?? '' ?></p>
+    <p><?= $errorMail ?? '' ?></p>
+    <form method='POST' enctype = "multipart/form-data" > 
+        <fieldset>
+        <legend>Log yourself in</legend>
+        <div class="Form">
+            <label for="Email">Email</label>
+            <input type="text" name="Email" id="email" autocomplete="on"/>            
+        </div>
+        <div class="Form">
+            <label for="Password">password</label>
+            <input type="password" name="Password" id="pass"/>            
+        </div>
+        <input type="hidden" name="form" value='connexion'> <!-- field to separate the 2 forms -->
+        <input type="submit" value="connect"/>
+        <nav>
+            <ul>
+                <li><a href="./login&connect=register">Not a member yet ?</a></li>
+            </ul>
+        </nav>
+           </fieldset>
+<?php
+else:
+?>
+<p><?= $info ?? '' ?></p>
+<p><?= $error ?? '' ?></p>
+<form method='POST' enctype = "multipart/form-data" > 
+    <fieldset>
+        <legend>Connect yourself first</legend>
+        <div class="group">
+            <label for="Last_Name">Last Name</label>
+            <input type="text" name="Last_Name" id="Email" autocomplete="off"/>            
+        </div>
+        <div class="group">
+            <label for="First_Name">First Name</label>
+            <input type="text" name="First_Name" id="Email" autocomplete="off"/>            
+        </div>
+        <div class="Form">
+            <label for="Email">Email</label>
+            <input type="text" name="Email" id="email" autocomplete="off"/>            
+        </div>
+        <div class="Form">
+            <label for="Password">password</label>
+            <input type="password" name="Password" id="pass"/>            
+        </div>
+        <input type="hidden" name="form" value='inscription'> <!-- field to separate the 2 forms -->
+        <input type="submit" value="register"/>
+        <nav>
+            <ul>
+                <li><a href="./login">Already a member ?</a></li>
+            </ul>
+        </nav>
+    </fieldset>
+</form>
+<?php
+endif;
+?>

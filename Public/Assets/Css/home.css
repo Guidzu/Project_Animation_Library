@@ -1,0 +1,138 @@
+
+body{
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    /*justify-content:center;*/
+    height:100vh;
+    /* background-image : url(../img/background-library.png);*/
+    /*background-size:cover;*/
+    /*background-repeat:no-repeat;*/
+    /*background-color:black;*/
+     
+    /*background-color: #fff3e6;*/
+     z-index:2;
+     
+}
+/*class called in Layout.phtml*/
+.hideMyCss{
+    display:none;
+}
+.header{
+    margin-left:80vw;
+    word-spacing:1em;
+}
+a{
+    color:black;
+}
+.Home_Block{
+    margin-top:20vh;
+    min-height:40vh;
+    max-width:50%;
+      margin-left: 10%; 
+	margin-right: auto;
+}
+.Main_Block{
+    max-width:90%;
+      margin-left: 50%;  
+	margin-right: auto;
+}
+.Explore{
+  /*making everything "higher" than the wave effect */
+  position:absolute;
+  z-index:3;
+  
+}
+button{
+    margin-top: 10%;
+    margin-left:30%;
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(255, 230, 255);
+    border-radius: 20%;
+   box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+    font-family: cursive;
+    transition: all 500ms ease-out;
+     
+}
+button:hover{
+    transition: all 500ms ease-in;;
+  transform:scale(2, 2);
+    opacity:.78;
+    
+}
+.Animated_Title{
+    /*Ensures the content is not revealed until the animation start*/
+  overflow-x:hidden;
+    /*The typwriter cursor */
+    font-size: 25px;
+    
+  border-right: .2em solid grey;  
+   /*Keeps the content on a single line */
+  white-space: nowrap; 
+  /*Gives that scrolling effect as the typing happens */
+  margin:auto;
+   /*Adjust as needed */
+  letter-spacing: .15em; 
+  animation: 
+    typing 2.5s steps(30, end),
+    blink-caret .8s step-end infinite;
+}
+
+ /*The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+ /*The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: grey }
+}
+
+
+.wave,
+.wave::before,
+.wave::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250vw;
+  height: 250vw;
+  margin-left: -125vw;
+  transform-origin: 50% 50%;
+  background-color: transparent;
+  border-radius: 38% 42%;
+  box-shadow: inset 0 0 10vw rgba(255, 0, 0, 0.8);
+  animation: spin 16s infinite linear;
+   z-index:1;
+
+}
+
+.wave::before {
+  width: 105%;
+  height: 95%;
+  margin-top: -125vw;
+  transform-origin: 49% 51%;
+  border-radius: 40% 38%;
+  box-shadow: inset 0 0 10vw rgba(126, 117, 255, 0.8);
+  animation: spin 13s infinite linear;
+ 
+}
+
+.wave::after {
+  width: 102%;
+  height: 98%;
+  margin-top: -125vw;
+  transform-origin: 51% 49%;
+  border-radius: 48% 42%;
+  box-shadow: inset 0 0 10vw rgba(77, 255, 77,0.8);
+  animation: spin 10s infinite linear;
+  
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+ 
+}

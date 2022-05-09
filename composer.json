@@ -1,0 +1,16 @@
+{
+    "name": "guidobenoist/project_animation_library",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Session\\": "Session/"
+        }
+    },
+    "authors": [
+        {
+            "name": "guidobenoist",
+            "email": "guidobenoist@hotmail.fr"
+        }
+    ],
+    "require": {}
+}

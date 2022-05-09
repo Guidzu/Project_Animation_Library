@@ -1,0 +1,199 @@
+/*Core of Layout.phtml*/
+html{
+     border:1.5em solid #262626;
+     height:100%;
+     cursor: url(../img/triangle.png)auto;
+     
+}
+body{
+    background-color: #ffd9b3;
+    
+    /*background-image : url(../img/background-library.png);*/
+    /*background-size:cover;*/
+    /*background-repeat:no-repeat;*/
+    /*background-color:black;*/
+     
+}
+#spacingNav{
+    margin-left:80vw;
+    word-spacing:1em;
+}
+h2{
+    font-family:Georgia, serif;
+    font-weight:lighter;
+    color:#99c2ff;
+}
+h3{
+    text-align:center;
+     font-family:fantasy;
+    font-weight:lighter;
+}
+a{
+    /*color:black;*/
+    text-decoration:none;
+}
+.alignCenter{
+    text-align:center;
+}
+.colorRed{
+    color:red;
+}
+
+
+  /* *********PART FOR Contact.phtml ANIMATION ********** */
+  
+ 
+.cloud{ 
+   margin-top:4vh;
+   width:9vw;
+   height:5vh;
+   background-color:rgb(242, 242, 242);
+   animation: slide 5s forwards linear 0s infinite;
+    border-radius: 50%;
+    box-shadow: 2em 1em 1.4em rgb(217, 217, 217);
+}
+.cloud::after, .cloud::before{
+    content:"";
+    position:relative;
+    display:inline-block;
+    background:inherit;
+    border-radius:inherit;
+}
+.cloud::after{
+    width:4vw;
+    height:7vh;
+    top:-9vh;
+    left:4vw;
+}
+.cloud::before{
+    width:5vw;
+    height:6vh;
+    top: -1vh;
+    left:2vw;
+    
+}
+.one{
+    /*fill-mode used to hide the first cloud wich has delay*/
+     animation-fill-mode: both;
+     animation-delay:1s;
+    
+}
+@keyframes slide {
+  0% {transform: translateX(-30vw) ; opacity: 1;}
+   25% {transform: translateX(10vw) ; opacity: 1;}
+   50% {transform: translateX(20vw) ; opacity: 0.4;}
+   100% {transform: translateX(30vw) ; opacity: 0;}
+}
+
+
+
+ /*  ********END of "Contact.phtml" content **********
+ 
+ 
+ 
+ 
+     *********PART FOR Main.phtml************/
+
+.SearchAnimations{
+    display:flex;
+    justify-content:center;
+     margin-bottom: 2vh;
+}
+.reset{
+    margin-left:5%;
+    
+}
+.containerAnimation{
+    margin-right:5px;
+    border:1px solid black;
+    border-radius:5%;
+    background-color:grey;
+    max-height:15em;
+    opacity:0.9;
+    overflow-y:scroll;
+}
+
+.htmlContent{
+    color:rgb(242, 242, 242);
+    border-radius:2%;
+	background-color: rgb(0, 0, 0);
+	margin-top:1em;
+	margin-left:1em;
+
+}
+.cssContent{
+    color:rgb(0, 134, 179);
+    border-radius:1%;
+	background-color: rgb(0, 0, 0);
+	margin-top:1em;
+	margin-left:1em;
+}
+.gifContent{
+	margin-top:1em;
+}
+.heartButton{
+    margin-top:5px;
+    margin-right:0;
+    max-height:2em;
+    width:2em;
+    background-color:#c2c2a3;
+    font-size:1em;
+    transition: all 500ms ease-out;
+}
+.heartButton:hover{
+    transition: all 500ms ease-in;
+     color:#00b8e6;  
+}
+.switchBlue{
+    color:#00b8e6;  
+}
+/*.
+don't need this class anymore
+Show{*/
+/*    display:visible;*/
+/*}*/
+.Hide{
+    display:none;
+}
+/*effective for all 3 buttons :-)*/
+.buttonHtml{
+    margin-bottom:5px;
+    background-color: #ff5c33;
+    color:white;
+}
+.buttonCss{
+    background-color: #0099ff;
+    color:white;
+}
+.buttonGif{
+    background-color:#1f1f14;
+    color:white;
+}
+
+.alignToButton{
+    display:flex;
+}
+.alignArticles{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.justifySize{
+    /*margin-top:5%;*/
+    max-width:25%;
+    margin-left:5%
+}
+
+/*****END OF MAIN.PHTML*******/
+
+
+
+/******PART FOR ANIMATION.PHTML********/
+
+.inputMargin{
+    margin-top:1em;
+    margin-left:3em;
+    height:3em;
+    background-color:grey;
+    color:white;
+}
